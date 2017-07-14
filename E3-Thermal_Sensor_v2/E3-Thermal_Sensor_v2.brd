@@ -8,7 +8,7 @@
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
@@ -23,7 +23,7 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -164,10 +164,6 @@
 Thermal_
 Sensor</text>
 <text x="9.906" y="11.811" size="1.27" layer="22" font="vector" ratio="12" rot="MR0">v2</text>
-<text x="4.445" y="2.032" size="1.016" layer="21" font="vector" ratio="12">GND</text>
-<text x="4.445" y="4.572" size="1.016" layer="21" font="vector" ratio="12">5V</text>
-<text x="4.445" y="7.112" size="1.016" layer="21" font="vector" ratio="12">SDA</text>
-<text x="1.27" y="11.938" size="1.016" layer="21" font="vector" ratio="12">SCL</text>
 <text x="7.112" y="9.652" size="1.016" layer="22" font="vector" ratio="12" rot="MR0">SCL</text>
 <text x="7.239" y="7.239" size="1.016" layer="22" font="vector" ratio="12" rot="MR0">SDA</text>
 <text x="6.223" y="4.572" size="1.016" layer="22" font="vector" ratio="12" rot="MR0">5V</text>
@@ -253,10 +249,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <library name="MLX90614">
 <packages>
 <package name="MLX90614XCF">
-<pad name="P2" x="0" y="2.54" drill="0.5"/>
-<pad name="P1" x="2.54" y="0" drill="0.5"/>
-<pad name="P4" x="0" y="-2.54" drill="0.5"/>
-<pad name="P3" x="-2.54" y="0" drill="0.5"/>
+<pad name="P2" x="0" y="2.54" drill="0.7"/>
+<pad name="P1" x="2.54" y="0" drill="0.7" shape="square"/>
+<pad name="P4" x="0" y="-2.54" drill="0.7"/>
+<pad name="P3" x="-2.54" y="0" drill="0.7"/>
 <circle x="0" y="0" radius="4.5" width="0.127" layer="21"/>
 <wire x1="3.8" y1="-2.5" x2="4.6" y2="-3.3" width="0.127" layer="21"/>
 <wire x1="4.6" y1="-3.3" x2="3.3" y2="-4.6" width="0.127" layer="21"/>
@@ -451,11 +447,16 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="J1" library="SparkFun-Connectors" package="1X04" value="" x="2.54" y="2.54" rot="MR90">
+<element name="J1" library="SparkFun-Connectors" package="1X04" value="" x="2.54" y="2.54" smashed="yes" rot="MR90">
 <attribute name="PROD_ID" value="CONN-09696" x="2.54" y="2.54" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="NAME" x="-1.1938" y="1.8288" size="1.27" layer="26" ratio="10" rot="MR0"/>
+<attribute name="VALUE" x="-0.635" y="1.27" size="1.27" layer="28" rot="MR90"/>
 </element>
 <element name="C1" library="SparkFun-Passives" package="0603-CAP" value=".1uF" x="8.89" y="6.35"/>
-<element name="U1" library="MLX90614" package="MLX90614XCF" value="MLX90614ESF-ACF" x="8.89" y="12.7" rot="R90"/>
+<element name="U1" library="MLX90614" package="MLX90614XCF" value="MLX90614ESF-ACF" x="8.89" y="12.7" smashed="yes" rot="R90">
+<attribute name="NAME" x="16.51" y="7.62" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="19.05" y="7.62" size="1.27" layer="27" rot="R90"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
