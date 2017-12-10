@@ -7,9 +7,8 @@
 // program to find it.
 // This code will check to make sure it finds a sensor at ADR_START, then
 // it will change the address,
-// For a standard RCMx1 based system, don't use
-// addresses 0x1c or 0x30, since those are already used by devices on the 
-// I2C bus.
+// For a standard RCMx1 based system, don't use addresses 0x1c, 0x28, 0x29 
+// or 0x30, since those are already used by devices on the I2C bus.
 // If any failures are found during the process, these will be printed out
 // and the process stopped.
 // NOTE: After you have run this program (with no errors) you must reboot
