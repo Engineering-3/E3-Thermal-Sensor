@@ -3,7 +3,7 @@ E3-Thermal Sensor
 
 ![E3 Thermal Sensor](http://engineering3.org/wp-content/uploads/GitHub/E3-Thermal.jpg)
 
-This is the thermal sensor used with the Engineering^3 curriculum and RCM Control Stack. Please see [Engineering^3](http://engineering3.org/) for more information on the complete RCM Control Stack project.
+This is the thermal sensor used with the Engineering^3 curriculum and RCM Control Stack. Please see [Engineering3](http://engineering3.org/) for more information on the complete RCM Control Stack project.
 
 
 Repository Contents
