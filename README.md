@@ -1,4 +1,4 @@
-E^3 Thermal Sensor
+E3-Thermal Sensor
 ========================
 
 ![E3 Thermal Sensor](http://engineering3.org/wp-content/uploads/GitHub/E3-Thermal.jpg)
